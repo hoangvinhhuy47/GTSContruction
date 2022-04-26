@@ -1,0 +1,86 @@
+@use "mixin" as *;
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.custom_table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  table {
+    table-layout: auto;
+    // @apply text-sm border border-solid border-gray;
+    border: 1px solid gray;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    border-radius: 5px;
+  }
+  th {
+    font-weight: 500;
+    padding: 15.5px 20px;
+    vertical-align: top;
+    white-space: nowrap;
+    // background-color: bg-white text-lg border-b border-solid border-gray;
+    background-color: var(---white);
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    color: #0d0229;
+    & + th {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      text-align: center;
+      min-width: 100px;
+      white-space: nowrap;
+      margin-right: 0;
+      margin-left: auto;
+      width: 11.32%;
+    }
+  }
+
+  tr {
+    &:first-child {
+      td {
+        padding-top: 15px;
+      }
+    }
+    &:last-child {
+      td {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 10px 20px;
+    font-weight: 400;
+    border-bottom: 1px solid gray;
+    // @apply bg-white text-md rounded-md;
+    background-color: white;
+    &:last-child {
+      margin-right: 0;
+      margin-left: auto;
+      width: 11.32%;
+    }
+
+    & + td {
+      padding-left: 0;
+    }
+  }
+  .customPagination {
+    display: flex;
+    width: 120px;
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+  }
+}

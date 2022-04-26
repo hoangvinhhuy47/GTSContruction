@@ -1,0 +1,51 @@
+@use "mixin" as *;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.viewButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 2px;
+}
+.buttonInActive {
+  background-color: var(--primarySecond);
+  min-width: 80px;
+  height: 35px;
+  color: var(--white);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  transition: 0.5s;
+  border-radius: 2px;
+  padding: 0px 5px;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(21, 20, 20, 0.2);
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+.button {
+  // background-color: var(--white);
+  min-width: 80px;
+  height: 35px;
+  padding: 0px 5px;
+  color: var(--neutralGrey);
+  font-size: var(--text-2xs);
+  border-radius: 2px;
+  font-weight: 400;
+  transition: 0.5s;
+  align-items: center;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+.viewTabs {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
